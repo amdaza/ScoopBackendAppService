@@ -1,0 +1,22 @@
+{
+  "name": "scoopbackendappservice",
+  "version": "1.0.0",
+  "description": "Backend App Service for Scoop App Client",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amdaza/ScoopBackendAppService.git"
+  },
+  "keywords": [
+    "backend"
+  ],
+  "author": "amdaza",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/amdaza/ScoopBackendAppService/issues"
+  },
+  "homepage": "https://github.com/amdaza/ScoopBackendAppService#readme"
+}
