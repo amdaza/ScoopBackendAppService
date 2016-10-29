@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/amdaza/ScoopBackendAppService/issues"
   },
-  "homepage": "https://github.com/amdaza/ScoopBackendAppService#readme"
+  "homepage": "https://github.com/amdaza/ScoopBackendAppService#readme",
+  "dependencies": {
+    "azure-mobile-apps": "^3.0.2",
+    "express": "^4.14.0"
+  }
 }
