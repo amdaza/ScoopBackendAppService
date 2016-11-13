@@ -51,8 +51,8 @@ table.insert(function (context) {
  table.insert(function (context) {
  	var authorId = context.user.id;
 
-    //var table = tables.getTable('Authors');
-    context.query.where({ 
+    var table = tables.getTable('Authors');
+    table.where({ 
        userId: authorId
     }).read({
        success: upsertItem
