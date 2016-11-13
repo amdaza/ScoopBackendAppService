@@ -67,6 +67,7 @@ table.insert(function (context) {
        success: upsertItem
     });
 */
+          console.log(query);
     //function upsertItem(existingItems) {
         if (query.length === 0) {
         	// Insert author ...
@@ -74,8 +75,8 @@ table.insert(function (context) {
 
         } else {
         	// Update author
-        	item.id = existingItems[0].id;
-	          table.update(item, {
+        	//item.id = existingItems[0].id;
+	          table.update(query[0], {
 	            success: function(updatedItem) {
                 	context.respond(200, updatedItem)
             	}
