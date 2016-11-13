@@ -1,6 +1,6 @@
 
 var table = module.exports = require('azure-mobile-apps').table();
-var azure = require('azure-storage');
+//var azure = require('azure-storage');
 
 
 // table.read(function (context) {
@@ -50,40 +50,40 @@ table.insert(function (context) {
 
 // CHANGE TO AUTHOR UPSERT
 
- table.insert(function (context) {
- 	var authorId = context.user.id;
+//  table.insert(function (context) {
+//  	var authorId = context.user.id;
 
-    //var table = tables.getTable('Authors');
+//     //var table = tables.getTable('Authors');
 
-    var query = new azure.TableQuery()
-    .select(['userId'])
-    .top(1)
-    .where('userId eq ?', authorId);
+//     var query = new azure.TableQuery()
+//     .select(['userId'])
+//     .top(1)
+//     .where('userId eq ?', authorId);
 
-/*
-    table.where({ 
-       userId: authorId
-    }).read({
-       success: upsertItem
-    });
-*/
-          console.log(query);
-    //function upsertItem(existingItems) {
-        if (query.length === 0) {
-        	// Insert author ...
-            return context.execute();
+// /*
+//     table.where({ 
+//        userId: authorId
+//     }).read({
+//        success: upsertItem
+//     });
+// */
+//           console.log(query);
+//     //function upsertItem(existingItems) {
+//         if (query.length === 0) {
+//         	// Insert author ...
+//             return context.execute();
 
-        } else {
-        	// Update author
-        	//item.id = existingItems[0].id;
-	          table.update(query[0], {
-	            success: function(updatedItem) {
-                	context.respond(200, updatedItem)
-            	}
-        	});
-        }
-   //  }
+//         } else {
+//         	// Update author
+//         	//item.id = existingItems[0].id;
+// 	          table.update(query[0], {
+// 	            success: function(updatedItem) {
+//                 	context.respond(200, updatedItem)
+//             	}
+//         	});
+//         }
+//    //  }
      
-});
+// });
 
  
