@@ -1,6 +1,6 @@
 
 var table = module.exports = require('azure-mobile-apps').table();
-var azure = require('azure');
+var azure = require('azure-storage');
 
 
 // table.read(function (context) {
