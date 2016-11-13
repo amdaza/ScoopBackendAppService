@@ -1,5 +1,7 @@
 
 var table = module.exports = require('azure-mobile-apps').table();
+var azure = require('azure');
+
 
 // table.read(function (context) {
 //     return context.execute();
