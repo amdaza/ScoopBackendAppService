@@ -38,7 +38,13 @@ function insert(item, user, request) {
      }
  }
  */
-
+/*
+ // When adding records, add or overwrite the userId with the authenticated user
+table.insert(function (context) {
+    context.item.userId = context.user.id;
+    return context.execute();
+});
+*/
 
 // CHANGE TO AUTHOR UPSERT
 
@@ -46,7 +52,7 @@ function insert(item, user, request) {
  	var authorId = context.user.id;
 
     //var table = tables.getTable('Authors');
-    table.where({ 
+    context.query.where({ 
        userId: authorId
     }).read({
        success: upsertItem
